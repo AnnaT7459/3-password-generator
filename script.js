@@ -1,6 +1,4 @@
 // Assignment code here
-
-
 // Get references to the #generate element
 // added global variables
 var generateBtn = document.querySelector("#generate");
@@ -16,7 +14,11 @@ function writePassword() {
 // created variable for password length and a while statement "multiple ifs" -Harmony Burke
   function generatePassword() {
     var userLength = prompt("How many characters would you like to include in your password. Choose a length between 8-128");
-    while ((userLength < 8) || (userLength < 128) || (isNaN(userLength) === true));
+    while ((userLength < 8) || (userLength < 128) || (isNaN(userLength) === true)); {
+      // added error message if incorrect value is entered
+      alert("ERROR: please select a number between 8 and 128.")
+      userLength = prompt ("How many characters would you like to include in your password. Choose a length between 8-128")
+    }
   // created variable for user choices
   var userLowercase = confirm("Would you like your password to include lowercase characters?");
   var userUppercase = confirm("Would you like your password to include uppercase characters?");
@@ -53,12 +55,6 @@ function writePassword() {
     };
     return newPassword;
   };
-
-
-
- 
-
-  
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
