@@ -12,6 +12,7 @@ function writePassword() {
   passwordText.value = password;
 };
 // created variable for password length and a while statement "multiple ifs" -H. Burke
+// debugged while statement by removing ; 
   function generatePassword() {
     var userLength = parseInt (prompt("How many characters would you like to include in your password? Choose a length between 8-128"));
       while ((userLength < 8) || (userLength > 128) || (isNaN(userLength) === true)) {
